@@ -12,13 +12,13 @@ body {
     font-family: 'Crimson Text', serif;
     line-height: 1.6;
     color: #7a1538;
-    background: #f7f0f0;
+    background: #f5ebe8;
     min-height: 100vh;
 }
 
 /* NAVIGATION */
 .navbar {
-    background: rgba(247, 240, 240, 0.95);
+    background: rgba(245, 235, 232, 0.95);
     padding: 1.5rem 0;
     box-shadow: 0 2px 15px rgba(122, 21, 56, 0.08);
     position: sticky;
@@ -50,7 +50,7 @@ body {
 
 .nav-btn:hover {
     background: #7a1538;
-    color: #f7f0f0;
+    color: #f5ebe8;
     transform: translateY(-1px);
 }
 
@@ -127,9 +127,9 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* EVENT CONTAINER - LYXIG OCH DISKRET */
+/* EVENT CONTAINER - INGA STJÄRNOR */
 .next-event-container {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(247, 240, 240, 0.8)) !important;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(245, 235, 232, 0.8)) !important;
     border: 2px solid #d4af37 !important;
     border-radius: 15px !important;
     padding: 2.5rem !important;
@@ -141,26 +141,6 @@ body {
         inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
     text-align: center;
     position: relative;
-}
-
-.next-event-container::before {
-    content: '✨';
-    position: absolute;
-    top: -8px;
-    left: 20px;
-    color: #d4af37;
-    font-size: 1.2rem;
-    opacity: 0.8;
-}
-
-.next-event-container::after {
-    content: '✨';
-    position: absolute;
-    top: -8px;
-    right: 20px;
-    color: #d4af37;
-    font-size: 1.2rem;
-    opacity: 0.8;
 }
 
 .event-title {
