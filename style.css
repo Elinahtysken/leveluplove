@@ -11,13 +11,13 @@ body {
     font-family: 'Crimson Text', serif;
     line-height: 1.6;
     color: #7a1538;
-    background: #f9f6f1;
+    background: #f7f0f0;
     min-height: 100vh;
 }
 
 /* Navigation */
 .navbar {
-    background: rgba(249, 246, 241, 0.95);
+    background: rgba(247, 240, 240, 0.95);
     backdrop-filter: blur(10px);
     padding: 1.5rem 0;
     box-shadow: 0 2px 15px rgba(122, 21, 56, 0.08);
