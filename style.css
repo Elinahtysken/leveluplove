@@ -1,11 +1,12 @@
-/* Reset and base styles */
+/* LEVEL UP LOVE - NY CSS */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+
+/* GRUNDLÄGGANDE STYLING */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 body {
     font-family: 'Crimson Text', serif;
@@ -15,16 +16,14 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation */
+/* NAVIGATION */
 .navbar {
     background: rgba(247, 240, 240, 0.95);
-    backdrop-filter: blur(10px);
     padding: 1.5rem 0;
     box-shadow: 0 2px 15px rgba(122, 21, 56, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
-    border-bottom: 1px solid rgba(122, 21, 56, 0.1);
 }
 
 .nav-container {
@@ -44,33 +43,27 @@ body {
     color: #7a1538;
     font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 0.95rem;
     font-family: 'Crimson Text', serif;
     letter-spacing: 0.8px;
+    transition: all 0.3s ease;
 }
 
 .nav-btn:hover {
     background: #7a1538;
-    color: #f9f6f1;
+    color: #f7f0f0;
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(122, 21, 56, 0.2);
 }
 
-/* Main Content */
+/* MAIN CONTENT */
 .main-content {
     max-width: 800px;
     margin: 0 auto;
     padding: 4rem 2rem;
     background: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(5px);
-    border-radius: 0;
-    margin-top: 0;
-    margin-bottom: 0;
     min-height: calc(100vh - 100px);
 }
 
-/* Logo */
+/* LOGO */
 .logo-container {
     text-align: center;
     margin-bottom: 1.5rem;
@@ -80,14 +73,9 @@ body {
     max-width: 120px;
     height: auto;
     opacity: 0.9;
-    transition: opacity 0.3s ease;
 }
 
-.logo:hover {
-    opacity: 1;
-}
-
-/* Title */
+/* TITEL */
 .main-title {
     text-align: center;
     font-size: 3.5rem;
@@ -99,14 +87,13 @@ body {
     line-height: 1.1;
 }
 
-/* Description */
+/* BESKRIVNING */
 .description {
     text-align: center;
     margin-bottom: 3.5rem;
     font-size: 1.25rem;
     color: #7a1538;
     line-height: 1.8;
-    font-weight: 400;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -126,14 +113,10 @@ body {
     color: #5d0f29;
 }
 
-.description p {
-    margin-bottom: 1rem;
-}
-
-/* Image */
+/* BILD */
 .image-container {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
 }
 
 .hero-image {
@@ -144,7 +127,84 @@ body {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Form */
+/* EVENT CONTAINER - KRAFTIG GULDRAM */
+.next-event-container {
+    background: white !important;
+    border: 8px solid #d4af37 !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    margin: 2rem auto !important;
+    max-width: 600px !important;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.5) !important;
+    text-align: center;
+    position: relative;
+}
+
+.next-event-container::before {
+    content: '✨ SPEEDDATING EVENT ✨';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #d4af37;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.event-title {
+    color: #7a1538;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.event-details {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.event-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: #f7f0f0;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    border: 3px solid #d4af37;
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+    min-width: 200px;
+}
+
+.event-icon {
+    font-size: 2rem;
+    min-width: 40px;
+}
+
+.event-info strong {
+    display: block;
+    color: #7a1538;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.event-info span {
+    color: #7a1538;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* FORMULÄR */
 .form-container {
     background: rgba(255, 255, 255, 0.8);
     padding: 2.5rem;
@@ -188,10 +248,10 @@ body {
     border: 1px solid rgba(122, 21, 56, 0.2);
     border-radius: 8px;
     font-size: 1.05rem;
-    transition: all 0.3s ease;
     background: rgba(255, 255, 255, 0.9);
     color: #7a1538;
     font-family: 'Crimson Text', serif;
+    transition: all 0.3s ease;
 }
 
 .form-group input:focus,
@@ -211,10 +271,10 @@ body {
     font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    margin-top: 1.5rem;
     font-family: 'Crimson Text', serif;
     letter-spacing: 0.8px;
+    margin-top: 1.5rem;
+    transition: all 0.3s ease;
 }
 
 .submit-btn:hover {
@@ -223,345 +283,88 @@ body {
     box-shadow: 0 6px 20px rgba(122, 21, 56, 0.3);
 }
 
-/* Call to Action */
-.cta-container {
-    text-align: center;
-    background: rgba(122, 21, 56, 0.05);
-    padding: 3rem 2rem;
-    border-radius: 15px;
-    border: 1px solid rgba(122, 21, 56, 0.1);
-    margin-top: 3rem;
+/* FOOTER - KRAFTIGA RUNDADE HÖRN */
+.footer {
+    background: linear-gradient(135deg, #f2e6e6 0%, #ead9d9 50%, #e0cccc 100%);
+    padding: 3rem 2rem 2rem;
+    margin-top: 4rem;
+    border-top: 1px solid rgba(122, 21, 56, 0.1);
 }
 
-.cta-title {
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-title {
+    color: #7a1538;
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #7a1538;
-    margin-bottom: 1rem;
-    font-weight: 500;
-}
-
-.cta-text {
-    color: #7a1538;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.cta-btn {
-    background: #7a1538;
-    color: white;
-    border: none;
-    padding: 1.2rem 3rem;
-    border-radius: 30px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-family: 'Source Sans Pro', sans-serif;
-    letter-spacing: 0.5px;
-}
-
-.cta-btn:hover {
-    background: #5d0f29;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(122, 21, 56, 0.3);
-}
-
-/* Register page specific styles */
-.register-info {
-    margin-bottom: 3rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.info-section {
     margin-bottom: 2.5rem;
-    text-align: left;
-}
-
-.info-section h2 {
-    color: #7a1538;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-.info-section h3 {
-    color: #7a1538;
-    font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.info-section p {
-    color: #7a1538;
-    line-height: 1.7;
-    margin-bottom: 1rem;
-}
-
-.feature-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.2rem;
-}
-
-.feature {
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.5);
-    border-radius: 8px;
-    border-left: 3px solid #7a1538;
-    color: #7a1538;
-    line-height: 1.6;
-}
-
-.feature strong {
-    display: block;
-    margin-bottom: 0.3rem;
     font-weight: 600;
 }
 
-.highlight {
-    background: rgba(122, 21, 56, 0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    border: 1px solid rgba(122, 21, 56, 0.1);
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
     text-align: center;
 }
 
-.highlight em {
-    font-style: italic;
-    color: #7a1538;
-    font-weight: 500;
-}
-
-/* Time and Location Section */
-.time-location-section {
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(212, 175, 55, 0.05));
-    padding: 2.5rem;
-    border-radius: 20px;
-    border: 3px solid #d4af37;
-    box-shadow: 
-        0 0 0 1px rgba(212, 175, 55, 0.3),
-        0 8px 25px rgba(212, 175, 55, 0.2),
-        inset 0 1px 0 rgba(255, 255, 255, 0.8);
-    margin-top: 2rem;
-    position: relative;
+/* BILDER MED KRAFTIGT RUNDADE HÖRN OCH GULDRAM */
+.member-photo {
+    width: 150px !important;
+    height: 150px !important;
+    margin: 0 auto 1rem;
+    border-radius: 60px !important;
     overflow: hidden;
+    border: 6px solid #d4af37 !important;
+    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.4) !important;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-/* Decorative corners */
-.time-location-section::before,
-.time-location-section::after {
-    content: '✨';
-    position: absolute;
-    font-size: 1.5rem;
-    color: #d4af37;
-    opacity: 0.6;
+.member-photo:hover {
+    transform: scale(1.05);
 }
 
-.time-location-section::before {
-    top: 15px;
-    left: 20px;
-    transform: rotate(-15deg);
+.member-image {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
 }
 
-.time-location-section::after {
-    top: 15px;
-    right: 20px;
-    transform: rotate(15deg);
-}
-
-/* Bottom decorative elements */
-.time-location-section {
-    background-image: 
-        radial-gradient(circle at 10% 90%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 90% 90%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
-}
-
-.time-location-section h3 {
-    text-align: center;
+.member-name {
     color: #7a1538;
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
-    text-shadow: 0 1px 2px rgba(212, 175, 55, 0.2);
-    position: relative;
-}
-
-/* Decorative line under heading */
-.time-location-section h3::after {
-    content: '💖 ⭐ 💖';
-    display: block;
-    font-size: 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1.5rem;
-    color: #d4af37;
-    letter-spacing: 0.5rem;
-}
-
-.meeting-info {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.meeting-detail {
-    display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 15px;
-    border: 2px solid rgba(212, 175, 55, 0.3);
-    border-left: 4px solid #d4af37;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 10px rgba(212, 175, 55, 0.1);
-    position: relative;
-}
-
-.meeting-detail:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
-    border-color: #d4af37;
-}
-
-/* Decorative sparkles for each card */
-.meeting-detail::before {
-    content: '✨';
-    position: absolute;
-    top: -5px;
-    right: 10px;
-    font-size: 1.2rem;
-    color: #d4af37;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.meeting-detail:hover::before {
-    opacity: 1;
-}
-
-.meeting-detail .icon {
-    font-size: 2rem;
-    min-width: 45px;
-    text-align: center;
-    filter: drop-shadow(0 1px 2px rgba(212, 175, 55, 0.3));
-}
-
-.detail-content strong {
-    display: block;
-    color: #7a1538;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-    text-shadow: 0 1px 1px rgba(212, 175, 55, 0.1);
-}
-
-.detail-content p {
-    color: #7a1538;
-    line-height: 1.5;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin: 0;
-    font-size: 0.95rem;
 }
 
-.form-subtitle {
-    text-align: center;
+.footer-description {
     color: #7a1538;
-    font-size: 0.95rem;
-    margin-bottom: 2rem;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
     font-style: italic;
+    max-width: 650px;
+    margin: 0 auto;
+    letter-spacing: 0.3px;
+    text-align: center;
 }
 
-/* Responsive adjustments for register page */
-@media (max-width: 768px) {
-    .register-info {
-        margin-bottom: 2rem;
-    }
-    
-    .info-section {
-        margin-bottom: 2rem;
-    }
-    
-    .info-section h2 {
-        font-size: 1.5rem;
-    }
-    
-    .info-section h3 {
-        font-size: 1.2rem;
-    }
-    
-    .feature {
-        padding: 0.8rem;
-    }
-    
-    .highlight {
-        padding: 1rem;
-    }
-    
-    .time-location-section {
-        padding: 2rem 1.5rem;
-        margin-top: 1.5rem;
-        border-width: 2px;
-    }
-    
-    .time-location-section::before,
-    .time-location-section::after {
-        font-size: 1.2rem;
-    }
-    
-    .time-location-section::before {
-        top: 10px;
-        left: 15px;
-    }
-    
-    .time-location-section::after {
-        top: 10px;
-        right: 15px;
-    }
-    
-    .time-location-section h3 {
-        font-size: 1.5rem;
-    }
-    
-    .time-location-section h3::after {
-        font-size: 0.9rem;
-        letter-spacing: 0.3rem;
-    }
-    
-    .meeting-info {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-    
-    .meeting-detail {
-        padding: 1.2rem;
-        border-left-width: 3px;
-    }
-    
-    .meeting-detail .icon {
-        font-size: 1.7rem;
-        min-width: 40px;
-    }
-    
-    .meeting-detail::before {
-        font-size: 1rem;
-    }
-}
+/* RESPONSIV DESIGN */
 @media (max-width: 768px) {
     .nav-container {
         flex-direction: column;
         gap: 1rem;
-    }
-    
-    .nav-btn {
-        padding: 0.6rem 1.2rem;
-        font-size: 0.9rem;
     }
     
     .main-content {
@@ -578,71 +381,36 @@ body {
     }
     
     .next-event-container {
-        padding: 1.8rem 1.4rem;
-        margin-bottom: 2rem;
-        border-width: 2px;
-        border-radius: 15px;
-    }
-    
-    .next-event-container::before,
-    .next-event-container::after {
-        font-size: 1.1rem;
-    }
-    
-    .next-event-container::before {
-        top: 10px;
-        left: 15px;
-    }
-    
-    .next-event-container::after {
-        top: 10px;
-        right: 15px;
-    }
-    
-    .event-title {
-        font-size: 1.4rem;
-    }
-    
-    .event-title::after {
-        font-size: 0.9rem;
-        letter-spacing: 0.3rem;
-        margin-bottom: 1rem;
+        margin: 1.5rem auto !important;
+        padding: 1.5rem !important;
     }
     
     .event-details {
         flex-direction: column;
-        gap: 1.2rem;
-        align-items: center;
+        gap: 1rem;
     }
     
     .event-item {
-        padding: 1rem 1.4rem;
         max-width: 300px;
-        width: 100%;
-        border-left-width: 3px;
-    }
-    
-    .event-icon {
-        font-size: 1.5rem;
-        min-width: 30px;
-    }
-    
-    .event-info strong {
-        font-size: 0.9rem;
-        letter-spacing: 0.6px;
-    }
-    
-    .event-info span {
-        font-size: 1rem;
-    }
-    
-    .event-item::before {
-        font-size: 1rem;
-        top: -5px;
-        right: 6px;
+        margin: 0 auto;
     }
     
     .form-container {
         padding: 1.5rem;
+    }
+    
+    .footer {
+        padding: 2.5rem 1.5rem 1.5rem;
+    }
+    
+    .team-container {
+        gap: 2rem;
+    }
+    
+    .member-photo {
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 50px !important;
+        border-width: 4px !important;
     }
 }
