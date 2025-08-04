@@ -35,20 +35,20 @@
         <!-- Form -->
         <div class="form-container">
             <h2 class="form-title">Börja din resa här</h2>
-            <form class="registration-form" id="registrationForm">
+            <form class="registration-form" id="registrationForm" action="https://formspree.io/f/xovlnodb" method="POST">
                 <div class="form-group">
                     <label for="linkedin">LinkedIn Profil:</label>
-                    <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/ditt-namn" required>
+                    <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/ditt-namn" required>
                 </div>
 
                 <div class="form-group">
                     <label for="name">Namn:</label>
-                    <input type="text" id="name" name="name" placeholder="Ditt fullständiga namn" required>
+                    <input type="text" id="name" name="full_name" placeholder="Ditt fullständiga namn" required>
                 </div>
 
                 <div class="form-group">
                     <label for="phone">Telefonnummer:</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+46 70 123 45 67" required>
+                    <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
                 </div>
 
                 <div class="form-group">
@@ -58,7 +58,7 @@
 
                 <div class="form-group">
                     <label for="seeking">Kön man söker:</label>
-                    <select id="seeking" name="seeking" required>
+                    <select id="seeking" name="seeking_gender" required>
                         <option value="">Välj...</option>
                         <option value="kvinna">Kvinna</option>
                         <option value="man">Man</option>
@@ -69,8 +69,12 @@
 
                 <div class="form-group">
                     <label for="height">Längd (cm):</label>
-                    <input type="number" id="height" name="height" min="100" max="250" placeholder="175" required>
+                    <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
                 </div>
+
+                <!-- Hidden field for Formspree -->
+                <input type="hidden" name="_subject" value="Ny registrering - Level up Love">
+                <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
 
                 <button type="submit" class="submit-btn">Registrera dig</button>
             </form>
