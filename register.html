@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Level up Love</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <button class="nav-btn" onclick="window.location.href='index.html'">Hem</button>
+            <button class="nav-btn">FAQ</button>
+            <button class="nav-btn" onclick="window.location.href='register.html'" style="background: #7a1538; color: #f9f6f1;">Register</button>
+            <button class="nav-btn">About us</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Title -->
+        <h1 class="main-title">Sign up to your VIP dating experience</h1>
+        
+        <!-- Informative Text -->
+        <div class="register-info">
+            <div class="info-section">
+                <h2>Välkommen till Level up Love</h2>
+                <p>Vi erbjuder en exklusiv och personlig matchningstjänst för dig som är redo att hitta djup och meningsfull kärlek. Vår VIP-upplevelse är skräddarsydd för ambitiösa singles som värderar kvalitet över kvantitet.</p>
+            </div>
+
+            <div class="info-section">
+                <h3>Vad gör oss unika?</h3>
+                <div class="feature-list">
+                    <div class="feature">
+                        <strong>Personlig matchmaking:</strong> Våra experter analyserar din profil och hittar kompatibla partners baserat på djupare värderingar och livsmål.
+                    </div>
+                    <div class="feature">
+                        <strong>Kvalitetskontroll:</strong> Alla medlemmar genomgår en noggrann verifieringsprocess för att säkerställa autenticitet.
+                    </div>
+                    <div class="feature">
+                        <strong>Diskret service:</strong> Vi respekterar din integritet och arbetar med fullständig diskretion.
+                    </div>
+                    <div class="feature">
+                        <strong>Coaching & support:</strong> Personlig vägledning genom hela processen från första intryck till långsiktig relation.
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h3>Vår process</h3>
+                <p>Efter din registrering kommer en av våra matchmaking-experter att kontakta dig för en personlig konsultation. Vi diskuterar dina önskemål, livssituation och vad du söker i en partner. Därefter påbörjar vi den skräddarsydda matchningsprocessen.</p>
+            </div>
+
+            <div class="info-section highlight">
+                <p><em>Begränsat antal platser per månad för att säkerställa högsta kvalitet på service.</em></p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="form-container">
+            <h2 class="form-title">Ansök om medlemskap</h2>
+            <p class="form-subtitle">Fyll i formuläret nedan så kontaktar vi dig inom 24 timmar för en kostnadsfri konsultation.</p>
+            
+            <form class="registration-form" id="registrationForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn Profil:</label>
+                    <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/ditt-namn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="full_name" placeholder="Ditt fullständiga namn" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Telefonnummer:</label>
+                    <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="age">Ålder:</label>
+                    <input type="number" id="age" name="age" min="18" max="100" placeholder="25" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="seeking">Kön man söker:</label>
+                    <select id="seeking" name="seeking_gender" required>
+                        <option value="">Välj...</option>
+                        <option value="kvinna">Kvinna</option>
+                        <option value="man">Man</option>
+                        <option value="icke-binär">Icke-binär</option>
+                        <option value="alla">Alla</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="height">Längd (cm):</label>
+                    <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
+                </div>
+
+                <!-- Hidden fields for Formspree -->
+                <input type="hidden" name="_subject" value="VIP Membership Application - Level up Love">
+                <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
+
+                <!-- Backup mailto button -->
+                <button type="button" onclick="sendViaEmail()" class="submit-btn" style="background: #5d0f29; margin-right: 1rem;">Skicka via Email</button>
+                <button type="submit" class="submit-btn">Ansök om VIP-medlemskap</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
