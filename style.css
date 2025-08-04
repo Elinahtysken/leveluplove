@@ -70,6 +70,23 @@ body {
     min-height: calc(100vh - 100px);
 }
 
+/* Logo */
+.logo-container {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 1;
+}
+
 /* Title */
 .main-title {
     text-align: center;
