@@ -325,6 +325,66 @@ body {
     font-weight: 500;
 }
 
+/* Time and Location Section */
+.time-location-section {
+    background: rgba(122, 21, 56, 0.03);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(122, 21, 56, 0.1);
+    margin-top: 2rem;
+}
+
+.time-location-section h3 {
+    text-align: center;
+    color: #7a1538;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.meeting-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.meeting-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    border-left: 3px solid #7a1538;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.meeting-detail:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(122, 21, 56, 0.1);
+}
+
+.meeting-detail .icon {
+    font-size: 1.8rem;
+    min-width: 40px;
+    text-align: center;
+}
+
+.detail-content strong {
+    display: block;
+    color: #7a1538;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.detail-content p {
+    color: #7a1538;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
 .form-subtitle {
     text-align: center;
     color: #7a1538;
@@ -357,6 +417,30 @@ body {
     
     .highlight {
         padding: 1rem;
+    }
+    
+    .time-location-section {
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+    
+    .time-location-section h3 {
+        font-size: 1.4rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .meeting-info {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .meeting-detail {
+        padding: 1rem;
+    }
+    
+    .meeting-detail .icon {
+        font-size: 1.5rem;
+        min-width: 35px;
     }
 }
 @media (max-width: 768px) {
