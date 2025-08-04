@@ -1,31 +1,6 @@
 // Level up Love - JavaScript functionality
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Form handling
-    const form = document.getElementById('registrationForm');
-    
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData);
-            
-            // Basic validation
-            if (validateForm(data)) {
-                // For now, just log the data (you'll add real functionality later)
-                console.log('Form submitted with data:', data);
-                
-                // Show success message
-                showMessage('Tack för din registrering! Vi kommer att kontakta dig snart.', 'success');
-                
-                // Reset form
-                form.reset();
-            }
-        });
-    }
-    
     // Navigation button functionality (placeholder)
     const navButtons = document.querySelectorAll('.nav-btn');
     navButtons.forEach(button => {
@@ -34,6 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
             showMessage(`${buttonText} funktionalitet kommer snart!`, 'info');
         });
     });
+
+    // Form handling - LET FORMSPREE HANDLE THE SUBMISSION
+    // Remove the preventDefault so Formspree can work
+    const form = document.getElementById('registrationForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            // Don't prevent default - let Formspree handle it
+            // Just show a quick message that we're processing
+            showMessage('Skickar din registrering...', 'info');
+        });
+    }
 });
 
 // Form validation function
