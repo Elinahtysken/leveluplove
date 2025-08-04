@@ -11,11 +11,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <button class="nav-btn">FAQ</button>
-            <button class="nav-btn">Register</button>
+            <button class="nav-btn" onclick="window.location.href='register.html'">Register</button>
             <button class="nav-btn">About us</button>
         </div>
     </nav>
-
     <!-- Main Content -->
     <main class="main-content">
         <!-- Title -->
@@ -26,12 +25,10 @@
             <p>Välkommen till Level up Love - där äkta kärlek börjar. Vi hjälper dig att hitta din perfekta match genom vårt unika matchningssystem som fokuserar på djupare kopplingar och gemensamma värderingar.</p>
             <p>Ta första steget mot ditt livs kärlek genom att fylla i formuläret nedan.</p>
         </div>
-
         <!-- Image -->
         <div class="image-container">
             <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Couple in love" class="hero-image">
         </div>
-
         <!-- Form -->
         <div class="form-container">
             <h2 class="form-title">Börja din resa här</h2>
@@ -40,22 +37,18 @@
                     <label for="linkedin">LinkedIn Profil:</label>
                     <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/ditt-namn" required>
                 </div>
-
                 <div class="form-group">
                     <label for="name">Namn:</label>
                     <input type="text" id="name" name="full_name" placeholder="Ditt fullständiga namn" required>
                 </div>
-
                 <div class="form-group">
                     <label for="phone">Telefonnummer:</label>
                     <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
                 </div>
-
                 <div class="form-group">
                     <label for="age">Ålder:</label>
                     <input type="number" id="age" name="age" min="18" max="100" placeholder="25" required>
                 </div>
-
                 <div class="form-group">
                     <label for="seeking">Kön man söker:</label>
                     <select id="seeking" name="seeking_gender" required>
@@ -66,21 +59,17 @@
                         <option value="alla">Alla</option>
                     </select>
                 </div>
-
                 <div class="form-group">
                     <label for="height">Längd (cm):</label>
                     <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
                 </div>
-
                 <!-- Hidden field for Formspree -->
                 <input type="hidden" name="_subject" value="Ny registrering - Level up Love">
                 <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
-
                 <button type="submit" class="submit-btn">Registrera dig</button>
             </form>
         </div>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>
