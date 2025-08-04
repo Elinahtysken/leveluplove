@@ -562,6 +562,46 @@ body {
         height: 200px;
     }
     
+    .next-event-container {
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .next-event-container::before {
+        font-size: 1rem;
+        padding: 0 8px;
+    }
+    
+    .event-title {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .event-details {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+    
+    .event-item {
+        padding: 0.8rem 1.2rem;
+        max-width: 280px;
+        width: 100%;
+    }
+    
+    .event-icon {
+        font-size: 1.3rem;
+        min-width: 25px;
+    }
+    
+    .event-info strong {
+        font-size: 0.85rem;
+    }
+    
+    .event-info span {
+        font-size: 0.95rem;
+    }
+    
     .form-container {
         padding: 1.5rem;
     }
