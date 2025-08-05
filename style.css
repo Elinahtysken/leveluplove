@@ -37,10 +37,10 @@ body {
 
 .nav-btn {
     background: none;
-    border: 1px solid #7a1538;
+    border: 1px solid #1e3a5f;
     padding: 0.8rem 2rem;
     border-radius: 30px;
-    color: #7a1538;
+    color: #1e3a5f;
     font-weight: 500;
     cursor: pointer;
     font-family: 'Crimson Text', serif;
@@ -49,7 +49,7 @@ body {
 }
 
 .nav-btn:hover {
-    background: #7a1538;
+    background: #1e3a5f;
     color: #f5ebe8;
     transform: translateY(-1px);
 }
@@ -273,7 +273,7 @@ body {
 }
 
 .submit-btn {
-    background: #7a1538;
+    background: #1e3a5f;
     color: white;
     border: none;
     padding: 1.1rem 2.5rem;
@@ -288,9 +288,9 @@ body {
 }
 
 .submit-btn:hover {
-    background: #5d0f29;
+    background: #152d47;
     transform: translateY(-1px);
-    box-shadow: 0 6px 20px rgba(122, 21, 56, 0.3);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.3);
 }
 
 /* FOOTER - KRAFTIGA RUNDADE HÖRN */
