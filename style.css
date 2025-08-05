@@ -569,21 +569,18 @@ body {
     
     /* Gallery Responsiv */
     .gallery-container {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        max-width: 300px;
-    }
-    
-    .gallery-item {
-        padding: 1.2rem;
+        gap: 2rem;
     }
     
     .gallery-image {
+        width: 100px;
         height: 100px;
+        border-radius: 18px;
+        border-width: 2px;
     }
     
     .gallery-caption {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 @media (max-width: 768px) {
