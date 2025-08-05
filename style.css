@@ -513,6 +513,59 @@ body {
     .faq-answer ul {
         font-size: 1rem;
     }
+    
+    /* About Us Responsiv */
+    .about-container {
+        margin: 0 1rem;
+    }
+    
+    .about-section {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .about-subtitle {
+        font-size: 1.6rem;
+    }
+    
+    .about-section p {
+        font-size: 1.05rem;
+    }
+    
+    .problem-item {
+        padding: 1.2rem;
+        gap: 1rem;
+    }
+    
+    .problem-icon {
+        font-size: 1.5rem;
+        min-width: 35px;
+    }
+    
+    .problem-content strong {
+        font-size: 1.1rem;
+    }
+    
+    .mission-highlight {
+        padding: 1.5rem;
+    }
+    
+    .mission-highlight p {
+        font-size: 1.2rem;
+    }
+    
+    .difference-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+    }
+    
+    .difference-item {
+        padding: 1.5rem;
+    }
+    
+    .difference-item h4 {
+        font-size: 1.2rem;
+    }
 }
 @media (max-width: 768px) {
     .nav-container {
