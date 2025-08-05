@@ -5,23 +5,76 @@ document.addEventListener('DOMContentLoaded', function() {
     const navButtons = document.querySelectorAll('.nav-btn');
     navButtons.forEach(button => {
         button.addEventListener('click', function() {
+            // Skip FAQ functionality for buttons with onclick handlers
+            if (this.hasAttribute('onclick')) return;
+            
             const buttonText = this.textContent;
-            showMessage(`${buttonText} funktionalitet kommer snart!`, 'info');
+            if (buttonText !== 'FAQ') {
+                showMessage(`${buttonText} functionality coming soon!`, 'info');
+            }
         });
     });
 
     // Form handling - LET FORMSPREE HANDLE THE SUBMISSION
-    // Remove the preventDefault so Formspree can work
     const form = document.getElementById('registrationForm');
     
     if (form) {
         form.addEventListener('submit', function(e) {
             // Don't prevent default - let Formspree handle it
-            // Just show a quick message that we're processing
-            showMessage('Skickar din registrering...', 'info');
+            showMessage('Submitting your application...', 'info');
         });
     }
+
+    // FAQ Functionality
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', function() {
+            // Close other open items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
 });
+
+// Backup email function
+function sendViaEmail() {
+    const form = document.getElementById('registrationForm');
+    const formData = new FormData(form);
+    
+    const name = formData.get('full_name');
+    const linkedin = formData.get('linkedin_profile');
+    const phone = formData.get('phone_number');
+    const age = formData.get('age');
+    const seeking = formData.get('seeking_gender');
+    const height = formData.get('height_cm');
+    
+    const subject = 'Ny registrering - Level up Love';
+    const body = `Hej!
+
+Här kommer en ny registrering från Level up Love:
+
+Namn: ${name}
+LinkedIn: ${linkedin}
+Telefon: ${phone}
+Ålder: ${age}
+Söker: ${seeking}
+Längd: ${height} cm
+
+Hälsningar,
+Level up Love webbsida`;
+
+    const mailtoLink = `mailto:elinamariatyskling@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailtoLink;
+}
 
 // Form validation function
 function validateForm(data) {
