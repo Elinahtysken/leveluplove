@@ -491,7 +491,52 @@ body {
     font-weight: 600;
 }
 
-/* FAQ Responsiv */
+/* GALLERY SEKTION */
+.gallery-section {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    text-align: center;
+}
+
+.gallery-image {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 3px solid #d4af37;
+    box-shadow: 
+        0 0 0 1px rgba(212, 175, 55, 0.2),
+        0 5px 20px rgba(212, 175, 55, 0.15);
+    transition: all 0.3s ease;
+    margin-bottom: 0.8rem;
+}
+
+.gallery-image:hover {
+    transform: translateY(-3px);
+    box-shadow: 
+        0 0 0 1px rgba(212, 175, 55, 0.3),
+        0 8px 25px rgba(212, 175, 55, 0.25);
+}
+
+.gallery-caption {
+    color: #7a1538;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ABOUT US SIDA */
 @media (max-width: 768px) {
     .faq-container {
         margin: 0 1rem;
