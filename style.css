@@ -566,6 +566,25 @@ body {
     .difference-item h4 {
         font-size: 1.2rem;
     }
+    
+    /* Gallery Responsiv */
+    .gallery-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 300px;
+    }
+    
+    .gallery-item {
+        padding: 1.2rem;
+    }
+    
+    .gallery-image {
+        height: 100px;
+    }
+    
+    .gallery-caption {
+        font-size: 1rem;
+    }
 }
 @media (max-width: 768px) {
     .nav-container {
