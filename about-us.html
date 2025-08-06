@@ -107,6 +107,36 @@
                 <p>We understand that successful, self-assured women deserve to meet men who appreciate their accomplishments and share their vision for a meaningful partnership. That's exactly what Level up Love delivers.</p>
             </div>
         </div>
+
+        <!-- Contact Form Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">Get in Touch</h2>
+            <p class="contact-description">Have questions about our events or want to learn more? We'd love to hear from you.</p>
+            
+            <div class="form-container">
+                <form class="contact-form" id="contactForm" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="contactName">Full Name:</label>
+                        <input type="text" id="contactName" name="full_name" placeholder="Your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email:</label>
+                        <input type="email" id="contactEmail" name="email" placeholder="your.email@example.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactMessage">Message:</label>
+                        <textarea id="contactMessage" name="message" placeholder="Tell us what you'd like to know..." rows="5" required></textarea>
+                    </div>
+
+                    <!-- Hidden fields for Formspree -->
+                    <input type="hidden" name="_subject" value="Contact Form - Level up Love">
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
     </main>
 
     <script src="script.js"></script>
