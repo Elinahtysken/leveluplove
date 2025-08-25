@@ -92,59 +92,90 @@
       </div>
     </div>
 
-    <!-- Form -->
-    <div class="form-container">
-      <h2 class="form-title">Apply for the next event</h2>
-      
-      <form class="registration-form" id="registrationForm" action="https://formspree.io/f/xovlnodb" method="POST" enctype="multipart/form-data">
-        <div class="form-group">
-          <label for="linkedin">LinkedIn Profile:</label>
-          <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/your-name" required>
-        </div>
+ <form class="registration-form" id="registrationForm" action="https://formspree.io/f/xovlnodb" method="POST" enctype="multipart/form-data">
+  <!-- Your Profile -->
+  <div class="form-group">
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="full_name" placeholder="Your full name" required>
+  </div>
 
-        <div class="form-group">
-          <label for="name">Full Name:</label>
-          <input type="text" id="name" name="full_name" placeholder="Your full name" required>
-        </div>
+  <div class="form-group">
+    <label for="linkedin">LinkedIn Profile:</label>
+    <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/your-name" required>
+  </div>
 
-        <div class="form-group">
-          <label for="phone">Phone Number:</label>
-          <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
-        </div>
+  <div class="form-group">
+    <label for="phone">Phone Number:</label>
+    <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
+  </div>
 
-        <div class="form-group">
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age" min="18" max="100" placeholder="25" required>
-        </div>
+<div class="form-group">
+  <label for="iam">I am a:</label>
+  <select id="iam" name="iam" required>
+    <option value="">Select...</option>
+    <option value="woman">Woman</option>
+    <option value="man">Man</option>
+    <option value="non-binary">Non-binary</option>
+    <option value="other">Other</option>
+  </select>
+</div>
 
-        <div class="form-group">
-          <label for="seeking">Looking for:</label>
-          <select id="seeking" name="seeking_gender" required>
-            <option value="">Select...</option>
-            <option value="women">Women</option>
-            <option value="men">Men</option>
-            <option value="non-binary">Non-binary</option>
-            <option value="all">All</option>
-          </select>
-        </div>
+  <div class="form-group">
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" min="18" max="100" placeholder="25" required>
+  </div>
 
-        <div class="form-group">
-          <label for="height">Height (cm):</label>
-          <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
-        </div>
+  <div class="form-group">
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
+  </div>
 
-        <div class="form-group">
-          <label for="photo">Profile Photo:</label>
-          <input type="file" id="photo" name="profile_photo" accept="image/*" class="file-input">
-          <p class="file-help">Upload a recent photo (JPG, PNG, max 5MB)</p>
-        </div>
+  <div class="form-group">
+    <label for="photo">Profile Photo:</label>
+    <input type="file" id="photo" name="profile_photo" accept="image/*" class="file-input">
+    <p class="file-help">Upload a recent photo (JPG, PNG, max 5MB)</p>
+  </div>
 
-        <!-- Hidden fields for Formspree -->
-        <input type="hidden" name="_subject" value="VIP Membership Application - Level up Love">
-        <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
+  <!-- Looking for -->
+  <div class="form-group">
+    <label for="seeking">Looking for:</label>
+    <select id="seeking" name="seeking_gender" required>
+      <option value="">Select...</option>
+      <option value="women">Women</option>
+      <option value="men">Men</option>
+      <option value="non-binary">Non-binary</option>
+      <option value="all">All</option>
+    </select>
+  </div>
 
-        <button type="submit" class="submit-btn">Apply Now</button>
-      </form>
+  <!-- New open questions -->
+  <div class="form-group">
+    <label for="dreamPartner">Describe your dream partner:</label>
+    <textarea id="dreamPartner" name="dream_partner_description" rows="4" placeholder="Traits, values, lifestyle, etc." required></textarea>
+  </div>
+
+  <div class="form-group">
+    <label for="perfectSunday">What does a perfect Sunday together with your partner look like?</label>
+    <textarea id="perfectSunday" name="perfect_sunday_description" rows="4" placeholder="Activities, vibe, routines..." required></textarea>
+  </div>
+
+  <!-- Consent -->
+  <div class="form-group">
+    <div class="checkbox-container">
+      <input type="checkbox" id="dataConsent" name="data_consent" required>
+      <label for="dataConsent" class="checkbox-label">
+        I agree to the processing of my personal data for the purpose of finding suitable matches and analyzing whether I fit the target audience. We do not use your data for any other purposes and will delete it upon request.
+      </label>
+    </div>
+  </div>
+
+  <!-- Hidden field for Formspree -->
+  <input type="hidden" name="_subject" value="New Registration - Level up Love">
+  <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
+
+  <button type="submit" class="submit-btn">Apply Now</button>
+</form>
+
     </div>
   </main>
 
