@@ -1,228 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tête-à-tête</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tête-à-tête</title>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Inline styles for the new boxes so this works immediately -->
+  <style>
+    .event-extra{
+      margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(245,235,232,.5);
+      border-left:3px solid #d4af37;border-radius:10px;font-family:'Crimson Text',serif;
+      font-size:1.05rem;line-height:1.6;color:#7a1538;
+    }
+    .event-price{
+      margin-top:1rem;padding:1.2rem 1.5rem;background:#fff;border:2px solid #d4af37;
+      border-radius:12px;font-family:'Playfair Display',serif;font-size:1.2rem;color:#7a1538;
+      text-align:center;box-shadow:0 4px 15px rgba(212,175,55,.15);
+    }
+    .event-price .small-note{
+      display:block;margin-top:.25rem;font-size:.95rem;font-family:'Crimson Text',serif;
+      color:rgba(122,21,56,.8);
+    }
+    /* Active state for navbar links */
+    .nav-btn.active{background:#7a1538;color:#f5ebe8;}
+  </style>
 </head>
 <body>
-    <!-- Navigation -->
+  <!-- Navigation -->
   <nav class="navbar">
-        <div class="nav-container">
-            <button class="nav-btn" onclick="window.location.href='faq.html'">FAQ</button>
-            <button class="nav-btn" onclick="window.location.href='register.html'">Register</button>
-            <button class="nav-btn" onclick="window.location.href='about-us.html'">About us</button>
-        </div>
-    </nav>
-    <!-- Main Content -->
-    <main class="main-content">
-        <!-- Logo -->
-        <div class="logo-container">
-            <img src="logo.png" alt="Level up Love Logo" class="logo">
-        </div>
-        
-        <!-- Title -->
-        <h1 class="main-title">Tête-à-tête</h1>
-        
-        <!-- Description Text -->
-        <div class="description">
-            <p>Welcome to Tête-à-tête, - where exclusive matchmaking meets authentic connection. We are the selective speed-dating and matchmaking agency that prioritizes quality over quantity, creating meaningful encounters between ambitious singles who are ready for serious relationships.</p>
-            <p>Our promise: Every woman and man will leave our events feeling - "Wow, there were genuinely several potential partners here who match my values and ambitions."</p>
-        </div>
-        
-        <!-- Image -->
-        <div class="image-container">
-            <img src="date1.png" alt="Elegant couple with wine glasses" class="hero-image">
-        </div>
-
-        <!-- Next Event Info -->
-        <div class="next-event-container">
-            <h3 class="event-title">Next Matchmaking Event</h3>
-            <div class="event-details">
-                <div class="event-item">
-                    <span class="event-icon">🕒</span>
-                    <div class="event-info">
-                        <strong>Time:</strong>
-                        <span>Saturday, 27 September, 8:00 PM</span>
-                    </div>
-                </div>
-                <div class="event-item">
-                    <span class="event-icon">📍</span>
-                    <div class="event-info">
-                        <strong>Location:</strong>
-                        <span>Location will be revealed, Stockholm</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-<form class="registration-form" id="registrationForm" action="https://formspree.io/f/xovlnodb" method="POST">
-  <!-- Your Profile -->
-  <div class="form-group">
-    <label for="name">Full Name:</label>
-    <input type="text" id="name" name="full_name" placeholder="Your full name" required>
-  </div>
-
-  <div class="form-group">
-    <label for="linkedin">LinkedIn Profile:</label>
-    <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/your-name" required>
-  </div>
-
-  <div class="form-group">
-    <label for="phone">Phone Number:</label>
-    <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
-  </div>
-
-  <div class="form-group">
-    <label for="iam">I am a:</label>
-    <select id="iam" name="iam" required>
-      <option value="">Select...</option>
-      <option value="woman">Woman</option>
-      <option value="man">Man</option>
-      <option value="non-binary">Non-binary</option>
-      <option value="other">Other</option>
-    </select>
-  </div>
-
-  <div class="form-group">
-    <label for="age">Age:</label>
-    <input type="number" id="age" name="age" min="18" max="100" placeholder="25" required>
-  </div>
-
-  <div class="form-group">
-    <label for="height">Height (cm):</label>
-    <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
-  </div>
-
-  <!-- NEW: link to picture instead of file upload -->
-  <div class="form-group">
-    <label for="photoUrl">Link to a picture of you:</label>
-    <input
-      type="url"
-      id="photoUrl"
-      name="profile_photo_url"
-      placeholder="https://instagram.com/p/… eller https://i.imgur.com/…"
-      required
-      pattern="https?://.+"
-    >
-    <p class="file-help">Paste a public link to a photo (Instagram post, Imgur, Google Photos, etc.).</p>
-  </div>
-
-  <!-- Looking for -->
-  <div class="form-group">
-    <label for="seeking">Looking for:</label>
-    <select id="seeking" name="seeking_gender" required>
-      <option value="">Select...</option>
-      <option value="women">Women</option>
-      <option value="men">Men</option>
-      <option value="non-binary">Non-binary</option>
-      <option value="all">All</option>
-    </select>
-  </div>
-
-  <!-- Open questions (min 800 chars each) -->
-  <div class="form-group">
-    <label for="dreamPartner">Describe your dream partner:</label>
-    <textarea
-      id="dreamPartner"
-      name="dream_partner_description"
-      rows="6"
-      placeholder="Traits, values, lifestyle, etc."
-      minlength="800"
-      required
-    ></textarea>
-    <p class="file-help"><span id="dpCount">0</span>/800 characters minimum</p>
-  </div>
-
-  <div class="form-group">
-    <label for="perfectSunday">What does a perfect Sunday together with your partner look like?</label>
-    <textarea
-      id="perfectSunday"
-      name="perfect_sunday_description"
-      rows="6"
-      placeholder="Activities, vibe, routines..."
-      minlength="800"
-      required
-    ></textarea>
-    <p class="file-help"><span id="psCount">0</span>/800 characters minimum</p>
-  </div>
-
-  <!-- Consent -->
-  <div class="form-group">
-    <div class="checkbox-container">
-      <input type="checkbox" id="dataConsent" name="data_consent" required>
-      <label for="dataConsent" class="checkbox-label">
-        I agree to the processing of my personal data for the purpose of finding suitable matches and analyzing whether I fit the target audience. We do not use your data for any other purposes and will delete it upon request.
-      </label>
+    <div class="nav-container">
+      <a href="index.html" class="nav-btn active">Home</a>
+      <a href="faq.html" class="nav-btn">FAQ</a>
+      <a href="register.html" class="nav-btn">Register</a>
+      <a href="about-us.html" class="nav-btn">About us</a>
     </div>
-  </div>
+  </nav>
 
-  <!-- Hidden field for Formspree -->
-  <input type="hidden" name="_subject" value="New Registration - Level up Love">
-  <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="logo.png" alt="Level up Love Logo" class="logo"/>
+    </div>
 
-  <button type="submit" class="submit-btn">Apply Now</button>
-</form>
+    <!-- Title -->
+    <h1 class="main-title">Tête-à-tête</h1>
 
-<!-- Min-length validator + live counters -->
-<script>
-  (function () {
-    const MIN = 800;
-    const dp = document.getElementById('dreamPartner');
-    const ps = document.getElementById('perfectSunday');
-    const dpCount = document.getElementById('dpCount');
-    const psCount = document.getElementById('psCount');
-    const form = document.getElementById('registrationForm');
+    <!-- Description Text -->
+    <div class="description">
+      <p>Welcome to Tête-à-tête, - where exclusive matchmaking meets authentic connection. We are the selective speed-dating and matchmaking agency that prioritizes quality over quantity, creating meaningful encounters between ambitious singles who are ready for serious relationships.</p>
+      <p>Our promise: Every woman and man will leave our events feeling - "Wow, there were genuinely several potential partners here who match my values and ambitions."</p>
+    </div>
 
-    function updateCount(el, counter) {
-      const len = (el.value || '').trim().length;
-      counter.textContent = len;
-    }
-    dp.addEventListener('input', () => updateCount(dp, dpCount));
-    ps.addEventListener('input', () => updateCount(ps, psCount));
-    updateCount(dp, dpCount);
-    updateCount(ps, psCount);
+    <!-- Image -->
+    <div class="image-container">
+      <img src="date1.png" alt="Elegant couple with wine glasses" class="hero-image"/>
+    </div>
 
-    form.addEventListener('submit', (e) => {
-      const dpLen = dp.value.trim().length;
-      const psLen = ps.value.trim().length;
-      if (dpLen < MIN || psLen < MIN) {
-        e.preventDefault();
-        alert('Please write at least 800 characters in both open questions before submitting.');
-      }
-    });
-  })();
-</script>
-
-
-
+    <!-- Next Event Info -->
+    <div class="next-event-container">
+      <h3 class="event-title">Next Matchmaking Event</h3>
+      <div class="event-details">
+        <div class="event-item">
+          <span class="event-icon">🕒</span>
+          <div class="event-info">
+            <strong>Time:</strong>
+            <span>Saturday, 27 September, 8:00 PM</span>
+          </div>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <h3 class="footer-title">Meet Our Team</h3>
-            <div class="team-container">
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="PXL_20250704_172914540.jpg" alt="Julia - Co-founder" class="member-image">
-                    </div>
-                    <p class="member-name">Julia</p>
-                </div>
-                <div class="team-member">
-                    <div class="member-photo">
-                        <img src="PXL_20250704_173017077.jpg" alt="Elina - Co-founder" class="member-image">
-                    </div>
-                    <p class="member-name">Elina</p>
-                </div>
-            </div>
-            <p class="footer-description">
-                We are Julia and Elina, the founders of Level up Love. Julia runs her own company and has extensive experience organizing events from her previous dance school. Elina works in marketing at an agency and has previously operated her own event management company. Together, we combine our expertise in business, marketing, and event planning to help ambitious singles find meaningful, lasting connections.
-            </p>
+        <div class="event-item">
+          <span class="event-icon">📍</span>
+          <div class="event-info">
+            <strong>Location:</strong>
+            <span>Location will be revealed, Stockholm</span>
+          </div>
         </div>
-    </footer>
+      </div>
 
-    <script src="script.js"></script>
+      <!-- NEW: explanatory text under event info -->
+      <div class="event-extra">
+        <p>
+          The next event is a matchmaking event — which means we will pair you with
+          someone we genuinely believe you will enjoy meeting. We promise to do our very best!
+          You’ll have plenty of time to talk with your match, and time to mingle with the other guests, too.
+          Sit back, relax, and let us do the work!
+        </p>
+      </div>
+
+      <!-- NEW: price box -->
+      <div class="event-price">
+        <strong>Price:</strong> 599 SEK
+        <span class="small-note">Payment is due after we confirm your spot at the event.</span>
+      </div>
+    </div>
+
+    <!-- Registration Form -->
+    <form class="registration-form" id="registrationForm" action="https://formspree.io/f/xovlnodb" method="POST">
+      <!-- Your Profile -->
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="full_name" placeholder="Your full name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="linkedin">LinkedIn Profile:</label>
+        <input type="url" id="linkedin" name="linkedin_profile" placeholder="https://linkedin.com/in/your-name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone_number" placeholder="+46 70 123 45 67" required>
+      </div>
+
+      <div class="form-group">
+        <label for="iam">I am a:</label>
+        <select id="iam" name="iam" required>
+          <option value="">Select...</option>
+          <option value="woman">Woman</option>
+          <option value="man">Man</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="100" placeholder="25" required>
+      </div>
+
+      <div class="form-group">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" name="height_cm" min="100" max="250" placeholder="175" required>
+      </div>
+
+      <!-- Link to picture instead of upload -->
+      <div class="form-group">
+        <label for="photoUrl">Link to a picture of you:</label>
+        <input
+          type="url"
+          id="photoUrl"
+          name="profile_photo_url"
+          placeholder="https://instagram.com/p/... or https://i.imgur.com/..."
+          pattern="https?://.+"
+          required
+        >
+        <p class="file-help">Paste a public link to a photo (Instagram post, Imgur, Google Photos, etc.).</p>
+      </div>
+
+      <!-- Looking for -->
+      <div class="form-group">
+        <label for="seeking">Looking for:</label>
+        <select id="seeking" name="seeking_gender" required>
+          <option value="">Select...</option>
+          <option value="women">Women</option>
+          <option value="men">Men</option>
+          <option value="non-binary">Non-binary</option>
+          <option value="all">All</option>
+        </select>
+      </div>
+
+      <!-- Open questions (min 800 chars each) -->
+      <div class="form-group">
+        <label for="dreamPartner">Describe your dream partner:</label>
+        <textarea
+          id="dreamPartner"
+          name="dream_partner_description"
+          rows="6"
+          placeholder="Traits, values, lifestyle, etc."
+          minlength="800"
+          required
+        ></textarea>
+        <p class="file-help"><span id="dpCount">0</span>/800 characters minimum</p>
+      </div>
+
+      <div class="form-group">
+        <label for="perfectSunday">What does a perfect Sunday together with your partner look like?</label>
+        <textarea
+          id="perfectSunday"
+          name="perfect_sunday_description"
+          rows="6"
+          placeholder="Activities, vibe, routines..."
+          minlength="800"
+          required
+        ></textarea>
+        <p class="file-help"><span id="psCount">0</span>/800 characters minimum</p>
+      </div>
+
+      <!-- Consent -->
+      <div class="form-group">
+        <div class="checkbox-container">
+          <input type="checkbox" id="dataConsent" name="data_consent" required>
+          <label for="dataConsent" class="checkbox-label">
+            I agree to the processing of my personal data for the purpose of finding suitable matches and analyzing whether I fit the target audience. We do not use your data for any other purposes and will delete it upon request.
+          </label>
+        </div>
+      </div>
+
+      <!-- Hidden field for Formspree -->
+      <input type="hidden" name="_subject" value="New Registration - Level up Love">
+      <input type="hidden" name="_next" value="https://leveluplove.vercel.app/thank-you.html">
+
+      <button type="submit" class="submit-btn">Apply Now</button>
+    </form>
+
+    <!-- Min-length validator + live counters -->
+    <script>
+      (function () {
+        const MIN = 800;
+        const dp = document.getElementById('dreamPartner');
+        const ps = document.getElementById('perfectSunday');
+        const dpCount = document.getElementById('dpCount');
+        const psCount = document.getElementById('psCount');
+        const form = document.getElementById('registrationForm');
+
+        function updateCount(el, counter){
+          const len = (el.value || '').trim().length;
+          counter.textContent = len;
+        }
+        dp.addEventListener('input', () => updateCount(dp, dpCount));
+        ps.addEventListener('input', () => updateCount(ps, psCount));
+        updateCount(dp, dpCount);
+        updateCount(ps, psCount);
+
+        form.addEventListener('submit', (e) => {
+          const dpLen = dp.value.trim().length;
+          const psLen = ps.value.trim().length;
+          if (dpLen < MIN || psLen < MIN) {
+            e.preventDefault();
+            alert('Please write at least 800 characters in both open questions before submitting.');
+          }
+        });
+      })();
+    </script>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
