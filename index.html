@@ -6,7 +6,10 @@
   <title>Tête-à-tête</title>
   <link rel="stylesheet" href="style.css"/>
 
-  <!-- Inline styles for the new boxes so this works immediately -->
+  <!-- Lucide (handritade linjeikoner) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Inline styles for the new boxes & icons so this works immediately -->
   <style>
     .event-extra{
       margin-top:1.5rem;padding:1.2rem 1.5rem;background:rgba(245,235,232,.5);
@@ -24,6 +27,11 @@
     }
     /* Active state for navbar links */
     .nav-btn.active{background:#7a1538;color:#f5ebe8;}
+
+    /* Lucide icon sizing inside .event-icon */
+    .event-icon svg{
+      width:32px;height:32px;stroke:#1e3a5f;stroke-width:1.75;
+    }
   </style>
 </head>
 <body>
@@ -63,14 +71,14 @@
       <h3 class="event-title">Next Matchmaking Event</h3>
       <div class="event-details">
         <div class="event-item">
-          <span class="event-icon">🕒</span>
+          <span class="event-icon" data-lucide="clock"></span>
           <div class="event-info">
             <strong>Time:</strong>
             <span>Saturday, 27 September, 8:00 PM</span>
           </div>
         </div>
         <div class="event-item">
-          <span class="event-icon">📍</span>
+          <span class="event-icon" data-lucide="map-pin"></span>
           <div class="event-info">
             <strong>Location:</strong>
             <span>Location will be revealed, Stockholm</span>
@@ -78,7 +86,7 @@
         </div>
       </div>
 
-      <!-- NEW: explanatory text under event info -->
+      <!-- explanatory text under event info -->
       <div class="event-extra">
         <p>
           The next event is a matchmaking event — which means we will pair you with
@@ -88,7 +96,7 @@
         </p>
       </div>
 
-      <!-- NEW: price box -->
+      <!-- price box -->
       <div class="event-price">
         <strong>Price:</strong> 599 SEK
         <span class="small-note">Payment is due after we confirm your spot at the event.</span>
@@ -234,6 +242,35 @@
       })();
     </script>
   </main>
+
+  <!-- Footer (with photos & about text) -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h3 class="footer-title">Meet Our Team</h3>
+      <div class="team-container">
+        <div class="team-member">
+          <div class="member-photo">
+            <img src="PXL_20250704_172914540.jpg" alt="Julia - Co-founder" class="member-image">
+          </div>
+          <p class="member-name">Julia</p>
+        </div>
+        <div class="team-member">
+          <div class="member-photo">
+            <img src="PXL_20250704_173017077.jpg" alt="Elina - Co-founder" class="member-image">
+          </div>
+          <p class="member-name">Elina</p>
+        </div>
+      </div>
+      <p class="footer-description">
+        We are Julia and Elina, the founders of Level up Love. Julia runs her own company and has extensive experience organizing events from her previous dance school. Elina works in marketing at an agency and has previously operated her own event management company. Together, we combine our expertise in business, marketing, and event planning to help ambitious singles find meaningful, lasting connections.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Activate Lucide icons -->
+  <script>
+    lucide.createIcons();
+  </script>
 
   <script src="script.js"></script>
 </body>
